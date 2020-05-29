@@ -4,6 +4,74 @@
   width: 650px;
 }
 
+body {
+    font-family: Verdana, Tahoma, sans-serif;
+}
+
+#banner {
+    background-image: url('/images/banner.jpg');
+    background-position: center;
+    background-size: cover;
+    padding-bottom: 45%;
+    margin-left: -150%;
+    margin-top: -5%;
+    width: 395%;
+    position: relative;
+}
+
+#title {
+    text-align: center;
+    font-weight: bolder;
+    font-size: 400%;
+    left: 40%;
+    top: 20%;
+    position: absolute;
+    color: pink;
+}
+
+#panda {
+    position: absolute;
+    left: 18%;
+    top: 10%;
+    height: 80%;
+}
+
+#music {
+    position: absolute;
+    left: 68%;
+    top: 30%;
+    height: 50%;
+}
+
+#profile {
+    margin-left: -60%;
+    width: 70%;
+    float: left;
+    padding-right: 10%;
+    margin-top: 10%;
+}
+
+#par_1{
+    margin-right: -20%; 
+    margin-top: 20%;
+    margin-bottom: 10%;
+}
+
+#random-fact{
+    
+}
+
+p {
+    font-size: 150%;
+}
+
+#campus{
+    float: right;
+    margin-right: -80%;
+    margin-top: 20%;
+    width: 100%;
+}
+
 #greeting-container {
   margin-top: 20px;
 }

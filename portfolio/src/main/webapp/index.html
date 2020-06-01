@@ -2,6 +2,7 @@
 <html>
   <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ciara's Portfolio</title>
     <link rel="stylesheet" href="style.css">
     <script src="script.js"></script>
@@ -9,29 +10,34 @@
   <body>
     <div id="content">
         <div id = "banner">
-        <img id = "panda" src ="/images/panda.gif" />
-        <h1 id = "title">My Portfolio</h1>
-        <a href="https://www.animatedimages.org/cat-music-102.htm"><img src="https://www.animatedimages.org/data/media/102/animated-music-image-0301.gif" id = "music" border="0" alt="animated-music-image-0301" /></a>
+            <img id = "panda" src ="/images/panda.gif" />
+            <h1 id = "title">Hello, I'm Ciara Brothers! <br> Welcome to my site!</h1>
+            <a href="https://www.animatedimages.org/cat-music-102.htm"><img src="https://www.animatedimages.org/data/media/102/animated-music-image-0301.gif" id = "music" border="0" alt="animated-music-image-0301" /></a>
         </div>
 
-      <img id = "profile" src = "/images/me2.jpg" />
-      <p id="par_1">My name is Ciara Brothers. I am from St. Louis, MO, and my birthday is June 21, 2001. I have a dog named Coco. I love R&B music, and Beyoncé is my favorite artist.
-          I also like watching action and comedy movies.
-      </p>
+        <hr>
+        <img id = "profile" src = "/images/me2.jpg" />
+        
+        <div id = "sec-1">
+            <p id="par_1">My name is Ciara Brothers. I am from St. Louis, MO, and my birthday is June 21, 2001. I have a dog named Coco. I love R&B music, and Beyoncé is my favorite artist.
+                I am also a fan of Broadway musicals.</p>
+            <p id="par_2">My technical background is in web design. I attended a technical high school for two years and learned programming.</p>
+            <div id="random-fact"><p>Click here to get a random fact about me:</p>
+                <button onclick="addRandomGreeting()">Hello</button>
+                <div id="greeting-container"></div>
+            </div>
+        </div>
 
+        <!--<a href = "https://github.com/cbrothers8">My GitHub Profile</a>-->
 
-      <p id="par_2">My technical background is in web design. I attended a technical high school for two years and learned programming.</p>
-
-      <div id="random-fact"><p>Click here to get a random fact about me:</p>
-      <button onclick="addRandomGreeting()">Hello</button>
-      <div id="greeting-container"></div></div>
-
-      <a href = "https://github.com/cbrothers8">My GitHub Profile</a>
-
-      <img id = "campus" src = "/images/campus.jpg"/>
-      <footer>
-        <a href="https://www.freepik.com/free-photos-vectors/background">Background vector created by Harryarts</a>
-      </footer>
+        <img id = "campus" src = "/images/campus.jpg"/>
+        <div id = "sec-2">
+            <p> I am a rising sophomore at Dillard University in New Orleans, LA. I am a member of the Honors Program, as well as the president of the martial arts club at Dillard. </p>
+            <p id = "comp-par"> In high school, I competed and placed in several programming and business competitions organized by DECA, FBLA, and Skills USA. </p>
+        </div>
+        <footer>
+            <!--<a href="https://www.freepik.com/free-photos-vectors/background">Background vector created by Harryarts</a>-->
+        </footer>
     </div>
   </body>
 </html>

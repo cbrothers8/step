@@ -1,9 +1,159 @@
-/* Laptop Screen */
-@media only screen and (min-width: 992px) {
+/* ---------------Laptop Screen------------------ */
+@media only screen and (min-width: 1300px) {
+#content {
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    }
 
+    body {
+        margin: 0;
+        font-family: Verdana, Tahoma, sans-serif;
+    }
+
+    hr {
+        border: 3px solid #6B8F6B;
+
+    }
+
+    #banner {
+        background-image: url('/images/banner.jpg');
+        background-position: center;
+        background-size: cover;
+        background-attachment: fixed;
+        width: 100%;
+        padding-bottom: 10%;
+        position: relative;
+    }
+
+    #title {
+        text-align: center;
+        font-weight: bolder;
+        font-size: 300%;
+        top: 10%;
+        left: 30%;
+        position: absolute;
+        color: pink;
+    }
+
+    #panda {
+        position: absolute;
+        top: 10%;
+        left: 12%;
+        width: 15%;
+    }
+
+    #music {
+        visibility: hidden;
+    }
+
+    #profile {
+        width: 30%;
+        float: left;
+        margin-top: 5%;
+        margin-bottom: 10%;
+        margin-left: 20%;
+    }
+
+    #sec-1 {
+        background-color: pink;
+        text-align: center;
+        padding: 2%;
+        width: 30%;
+        margin-top: 7%;
+        margin-bottom: 10%;
+        margin-left: 50%;
+    }
+
+    p {
+        font-size: 150%;
+    }
+
+    #campus{
+        float: right;
+        width: 50%;
+        margin-bottom: 20%;
+        margin-right: 5%;
+    }
+
+    #greeting-container {
+    margin-top: 20px;
+    }
+
+    #sec-2{
+        background-color: #99CD99;
+        text-align: center;
+        padding: 4%;
+        width: 30%;
+        margin-top: 14%;
+        margin-left: 8%;
+        margin-bottom: 10%;
+    }
+
+    footer {
+        margin-bottom: 3%;
+        margin-left: 30%;
+        white-space: nowrap;
+    }
+
+    footer h3 {
+        margin-left: -5%;
+    }
+
+    .socials {
+        display: inline;
+        font-size: 150%;
+        margin-left: 10%;
+    }
+
+    footer a:visited {
+        text-decoration: none;
+        color: black;
+    }
+
+    footer a:link {
+        text-decoration: none;
+    }
+
+    footer a:hover {
+        font-size: 102%;
+        border-style: solid;
+        border-width: thick;
+    }
+
+    #github {
+        font-weight: bolder;
+        margin-right: 2%;
+        border-style: solid;
+        border-width: thin;
+        background-color: pink;
+        padding: 0.5%;
+        border-radius: 15px;
+    }
+
+    #linkedin {
+        font-weight: bolder;
+        border-style: solid;
+        border-width: thin;
+        background-color: #6B8F6B;
+        padding: 0.5%;
+        border-radius: 15px;
+    }
+
+    .credit {
+        display: block;
+        margin-top: 1%;
+        margin-left: 9%;
+    }
+
+    a:hover.credit {
+        color: black;
+        font-size: 100%;
+        border: none;
+    }
 }
 
-/* Monitor Screen */
+/*-------------Monitor Screen--------------- */
 @media only screen and (min-width: 2000px) {
     #content {
     margin-left: auto;
@@ -25,7 +175,7 @@
         background-image: url('/images/banner.jpg');
         background-position: center;
         background-size: cover;
-        padding-bottom: 45%;
+        padding-bottom: 50%;
         margin-left: -150%;
         margin-top: -5%;
         width: 395%;
@@ -50,8 +200,9 @@
     }
 
     #music {
+        visibility: visible;
         position: absolute;
-        left: 73%;
+        left: 68%;
         top: 30%;
         height: 50%;
     }
@@ -84,8 +235,8 @@
     #campus{
         float: right;
         margin-right: -60%;
-        margin-top: 20%;
         width: 100%;
+        margin-top: 10%;
     }
 
     #greeting-container {
@@ -106,19 +257,65 @@
 
     footer {
         margin-top: 20%;
+        margin-bottom: 5%;
+        margin-left: -10%;
+        padding-left: -20%;
+        width: 300%;
+        white-space: nowrap;
     }
 
+    footer h3 {
+        margin-left: 2%;
+    }
     .socials {
-        box-sizing: border-box;
-        display: flex;
+        display: inline;
+        font-size: 150%;
+        margin-left: 10%;
     }
 
-    .link-imgs{
-        flex: 50%;
-        margin-right: 10%;
+    footer a:visited {
+        text-decoration: none;
+        color: black;
+    }
+
+    footer a:link {
+        text-decoration: none;
+    }
+
+    footer a:hover {
+        font-size: 102%;
+        border-style: solid;
+        border-width: thick;
+    }
+
+    #github {
+        font-weight: bolder;
+        margin-right: 2%;
+        border-style: solid;
+        border-width: thin;
+        background-color: pink;
+        padding: 0.5%;
+        border-radius: 15px;
+    }
+
+    #linkedin {
+        font-weight: bolder;
+        border-style: solid;
+        border-width: thin;
+        background-color: #6B8F6B;
+        padding: 0.5%;
+        border-radius: 15px;
     }
 
     .credit {
-        margin-left: 20%;
+        display: block;
+        margin-top: 1%;
+        margin-left: 9%;
+    }
+
+    a:hover.credit {
+        color: black;
+        font-size: 100%;
+        border: none;
     }
 }

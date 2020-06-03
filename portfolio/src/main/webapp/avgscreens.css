@@ -1,0 +1,154 @@
+/* ---------------Large Screen (1280x800)------------------ */
+@media only screen and (max-width: 1290px) {
+#content {
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    }
+
+    body {
+        margin: 0;
+        font-family: Verdana, Tahoma, sans-serif;
+    }
+
+    hr {
+        border: 3px solid #6B8F6B;
+
+    }
+
+    #banner {
+        background-image: url('/images/banner.jpg');
+        background-position: center;
+        background-size: cover;
+        background-attachment: fixed;
+        width: 100%;
+        padding-bottom: 10%;
+        position: relative;
+    }
+
+    #title {
+        text-align: center;
+        font-weight: bolder;
+        font-size: 300%;
+        top: 10%;
+        left: 30%;
+        position: absolute;
+        color: pink;
+    }
+
+    #panda {
+        position: absolute;
+        top: 10%;
+        left: 12%;
+        width: 15%;
+    }
+
+    #music {
+        visibility: hidden;
+    }
+
+    #profile {
+        width: 30%;
+        float: left;
+        margin-top: 5%;
+        margin-bottom: 10%;
+        margin-left: 20%;
+    }
+
+    #sec-1 {
+        background-color: pink;
+        text-align: center;
+        padding: 2%;
+        width: 40%;
+        margin-top: 7%;
+        margin-bottom: 10%;
+        margin-left: 50%;
+    }
+
+    p {
+        font-size: 150%;
+    }
+
+    #campus{
+        float: right;
+        width: 50%;
+        margin-bottom: 20%;
+        margin-right: 2%;
+    }
+
+    #greeting-container {
+    margin-top: 20px;
+    }
+
+    #sec-2{
+        background-color: #99CD99;
+        text-align: center;
+        padding: 2%;
+        width: 40%;
+        margin-top: 14%;
+        margin-left: 5%;
+        margin-bottom: 10%;
+    }
+
+    footer {
+        margin-bottom: 3%;
+        margin-left: 30%;
+        white-space: nowrap;
+    }
+
+    footer h3 {
+        margin-left: -5%;
+    }
+
+    .socials {
+        display: inline;
+        font-size: 150%;
+        margin-left: 10%;
+    }
+
+    footer a:visited {
+        text-decoration: none;
+        color: black;
+    }
+
+    footer a:link {
+        text-decoration: none;
+    }
+
+    footer a:hover {
+        font-size: 102%;
+        border-style: solid;
+        border-width: thick;
+    }
+
+    #github {
+        font-weight: bolder;
+        margin-right: 2%;
+        border-style: solid;
+        border-width: thin;
+        background-color: pink;
+        padding: 0.5%;
+        border-radius: 15px;
+    }
+
+    #linkedin {
+        font-weight: bolder;
+        border-style: solid;
+        border-width: thin;
+        background-color: #6B8F6B;
+        padding: 0.5%;
+        border-radius: 15px;
+    }
+
+    .credit {
+        display: block;
+        margin-top: 1%;
+        margin-left: 9%;
+    }
+
+    a:hover.credit {
+        color: black;
+        font-size: 100%;
+        border: none;
+    }
+}

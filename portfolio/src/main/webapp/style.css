@@ -232,6 +232,14 @@
         font-size: 150%;
     }
 
+    #submit {
+        display: block;
+    }
+
+    #box {
+        display: block;
+    }
+
     #campus{
         float: right;
         margin-right: -60%;
@@ -248,7 +256,7 @@
         width: 80%;
         height: 100%;
         margin-left: -40%;
-        margin-top: 23%;
+        margin-top: 21%;
         padding: 5%;
         padding-right: 15%;
         padding-left: 15%;

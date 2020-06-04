@@ -23,7 +23,7 @@
                 I am also a fan of Broadway musicals.</p>
             <p>My technical background is in web design. I attended a technical high school for two years and learned programming.</p>
             <div id="random-fact"><p>Click here to get a random fact about me:</p>
-                <button onclick="addRandomGreeting()">Hello</button>
+                <button onclick="addRandomGreeting()">Click</button>
                 <div id="greeting-container"></div>
             </div>
         </div>
@@ -37,7 +37,15 @@
             <button onclick="getHello()">Hello</button>
             <div id="hello"></div>
         </div>
-        
+
+        <div id="comment-section">
+            <form action="/data" method="POST" id="comment-form">
+            <label>Comments</label>
+                <textarea name="box" id="box"></textarea>
+                <button type="submit" id="submit">Submit</button>
+            </form>
+        </div>
+
         <footer>
             <h3> Click the links below to view my GitHub and LinkedIn profiles: </h3>
             <div class="socials">

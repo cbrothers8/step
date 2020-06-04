@@ -33,3 +33,7 @@ async function getHello() {
   const helloButton = document.getElementById('hello');
   helloButton.innerText = message;
 }
+
+async function loadComments() {
+    
+}

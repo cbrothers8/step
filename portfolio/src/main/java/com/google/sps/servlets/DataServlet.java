@@ -59,12 +59,6 @@ public class DataServlet extends HttpServlet {
         messages = new ArrayList<>();
     }
 
-    private String convertToJsonUsingGson(Query query) {
-        Gson gson = new Gson();
-        String json = gson.toJson(messages);
-        return json;
-    }
-
     @Override
     public void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
         String newComment = request.getParameter("new-comment");

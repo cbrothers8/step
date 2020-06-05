@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="style.css">
     <script src="script.js"></script>
   </head>
-  <body>
+  <body onload="loadComments()">
     <div id="content">
         <div id = "banner">
             <img id = "panda" src ="/images/panda.gif" />
@@ -28,22 +28,23 @@
             </div>
         </div>
 
-        <!--<a href = "https://github.com/cbrothers8">My GitHub Profile</a>-->
-
         <img id = "campus" src = "/images/campus.jpg"/>
         <div id = "sec-2">
             <p> I am a rising sophomore at Dillard University in New Orleans, LA. I am a member of the Honors Program, as well as the president of the martial arts club at Dillard. </p>
             <p> In high school, I competed and placed in several programming and business competitions organized by DECA, FBLA, and Skills USA. </p>
-            <button onclick="getHello()">Hello</button>
-            <div id="hello"></div>
+        </div>
+
+        <div id="add-comment">
+            <form action="/data" method="POST" id="comment-form">
+            <h4>Comments</h4>
+            <textarea name="new-comment" rows="4" cols="50" id="comment-box"></textarea>
+            <button type="submit" id="submit">Submit</button>
+            </form>
         </div>
 
         <div id="comment-section">
-            <form action="/data" method="POST" id="comment-form">
-            <label>Comments</label>
-                <textarea name="box" id="box"></textarea>
-                <button type="submit" id="submit">Submit</button>
-            </form>
+            <table id="comment-table">
+            </table>
         </div>
 
         <footer>

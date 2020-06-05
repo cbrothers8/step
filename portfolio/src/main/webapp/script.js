@@ -27,13 +27,20 @@ function addRandomGreeting() {
   greetingContainer.innerText = greeting;
 }
 
-async function getHello() {
-  const response = await fetch('/data');
-  const message = await response.text();
-  const helloButton = document.getElementById('hello');
-  helloButton.innerText = message;
-}
-
 async function loadComments() {
-    
+  const response = await fetch('/data');
+  const oldCommentArray = await response.text();
+  //Remove quotes and brackets from comments
+  removeQuotes = oldCommentArray.replace(/"/g, '');
+  oldComments = removeQuotes.replace(/[\])}[{(]/g, '');
+  oldComments = oldComments.split(",");
+
+  //Add each comment to table
+  for (eachComment of oldComments) {
+    newRow = document.createElement('tr');
+    nextComment = document.createElement('td');
+	nextComment.innerText = eachComment;
+    newRow.appendChild(nextComment);
+	document.getElementById('comment-table').appendChild(newRow);
+  }
 }

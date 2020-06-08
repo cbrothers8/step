@@ -23,6 +23,7 @@ import com.google.appengine.api.datastore.Query.SortDirection;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.*;
 import com.google.gson.Gson;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -44,7 +45,6 @@ public class DataServlet extends HttpServlet {
         oldComments = new ArrayList<>();
         for (Entity entity : results.asIterable()) {
             String comment = (String) entity.getProperty("comment");
-    
             oldComments.add(comment);
         }
 

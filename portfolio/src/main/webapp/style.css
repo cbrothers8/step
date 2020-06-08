@@ -236,8 +236,8 @@
         display: block;
     }
 
-    #box {
-        display: block;
+    #comment-box {
+       
     }
 
     #campus{
@@ -261,6 +261,19 @@
         padding-right: 15%;
         padding-left: 15%;
         text-align: center;
+    }
+
+    textarea {
+        margin-top: -10%;
+    }
+
+    table, td {
+        border: 2px solid black;
+       	border-collapse: collapse;
+        margin-top: 5%;
+        width: 70%;
+        padding: 10%;
+        padding-right: 30%;
     }
 
     footer {

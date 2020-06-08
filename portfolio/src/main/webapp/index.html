@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="style.css">
     <script src="script.js"></script>
   </head>
-  <body>
+  <body onload="loadComments()">
     <div id="content">
         <div id = "banner">
             <img id = "panda" src ="/images/panda.gif" />
@@ -28,25 +28,34 @@
             </div>
         </div>
 
-        <!--<a href = "https://github.com/cbrothers8">My GitHub Profile</a>-->
-
         <img id = "campus" src = "/images/campus.jpg"/>
         <div id = "sec-2">
             <p> I am a rising sophomore at Dillard University in New Orleans, LA. I am a member of the Honors Program, as well as the president of the martial arts club at Dillard. </p>
             <p> In high school, I competed and placed in several programming and business competitions organized by DECA, FBLA, and Skills USA. </p>
-            <button onclick="getHello()">Hello</button>
-            <div id="hello"></div>
         </div>
+        
+        <label for="numOfComments">Number of Comments</label>
+	    <select id="numOfComments" onchange="refresh()">
+            <option value="all"selected>All</option>
+            <option value="5">5</option>
+            <option value="1">One</option>
+        </select>
 
-        <div id="comment-section">
+        <div id="add-comment">
             <form action="/data" method="POST" id="comment-form">
-            <label>Comments</label>
-                <textarea name="box" id="box"></textarea>
-                <button type="submit" id="submit">Submit</button>
+            <h4>Comments</h4>
+            <textarea name="new-comment" rows="4" cols="50" id="comment-box"></textarea>
+            <button type="submit" id="submit">Submit</button>
             </form>
         </div>
 
+        <div id="comment-section">
+            <table id="comment-table">
+            </table>
+        </div>
+
         <footer>
+            <p id="test"></p>
             <h3> Click the links below to view my GitHub and LinkedIn profiles: </h3>
             <div class="socials">
                 <a id="github" href="https://github.com/cbrothers8">GitHub</a>

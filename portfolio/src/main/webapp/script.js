@@ -15,6 +15,7 @@
 /**
  * Adds a random greeting to the page.
  */
+
 function addRandomGreeting() {
   const greetings =
       ['I know how to knit.', 'Je parle Français. (I speak French.)', 'Panda Bears are my favorite animals.', 'I play the flute and clarinet.'];
@@ -27,13 +28,67 @@ function addRandomGreeting() {
   greetingContainer.innerText = greeting;
 }
 
-async function getHello() {
-  const response = await fetch('/data');
-  const message = await response.text();
-  const helloButton = document.getElementById('hello');
-  helloButton.innerText = message;
-}
+var numOfComments;
+var oldComments;
+var ctr = 0;
 
 async function loadComments() {
-    
+  const response = await fetch('/data');
+  const oldCommentArray = await response.text();
+
+  //Remove quotes and brackets from comments
+  removeQuotes = oldCommentArray.replace(/"/g, '');
+  oldComments = removeQuotes.replace(/[\])}[{(]/g, '');
+  oldComments = oldComments.split(",");
+
+  calculateMaxComments(oldComments);
+}
+
+function calculateMaxComments(oldComments) {
+    var selected = document.getElementById("numOfComments").value;
+	if (selected == 5) {
+      	changeMaxComments(5, oldComments);
+  	}
+    else if (selected == 1){
+        changeMaxComments(1, oldComments);
+    }
+  	else {
+    	//Add all comments to table
+    	for (eachComment of oldComments) {
+            createTable(eachComment);
+  		}
+  	}
+}
+
+function createTable(eachComment) {
+  var table = document.getElementById("comment-table");
+  var row = table.insertRow(0);
+  var cell1 = row.insertCell(0);
+  cell1.innerHTML = eachComment;
+}
+
+function changeMaxComments(numOfComments, oldComments) {
+    //Add max number of comments to table
+    for (eachComment of oldComments) {
+        if (ctr == numOfComments) {
+        	break;
+      	}
+        createTable(eachComment);
+        ctr++;
+  	}
+}
+
+function myDeleteFunction(table) {
+    var rowCount = table.rows.length; //7
+        for (var i = rowCount - 1; i >= 0; i--) {
+            table.deleteRow(i);
+        }
+}
+
+function refresh(){
+    ctr = 0;
+    table = document.getElementById("comment-table");
+    //Clear previous comments
+    myDeleteFunction(table);
+    calculateMaxComments(oldComments);
 }

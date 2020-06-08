@@ -30,6 +30,7 @@ function addRandomGreeting() {
 async function loadComments() {
   const response = await fetch('/data');
   const oldCommentArray = await response.text();
+  
   //Remove quotes and brackets from comments
   removeQuotes = oldCommentArray.replace(/"/g, '');
   oldComments = removeQuotes.replace(/[\])}[{(]/g, '');

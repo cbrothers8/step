@@ -32,7 +32,6 @@ import javax.servlet.http.HttpServletResponse;
 /** Servlet that returns some example content. TODO: modify this file to handle comments data */
 @WebServlet("/data")
 public class DataServlet extends HttpServlet {
-    public List<String> messages;
     public List<String> oldComments;
 
     @Override
@@ -55,15 +54,8 @@ public class DataServlet extends HttpServlet {
         response.getWriter().println(gson.toJson(oldComments));
     }
 
-    public void init(){
-        messages = new ArrayList<>();
-    }
-
     @Override
     public void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
-        String newComment = request.getParameter("new-comment");
-        messages.add(newComment);
-
         //Datastore
         String storeNewComment = request.getParameter("new-comment");
         long timestamp = System.currentTimeMillis();

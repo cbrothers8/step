@@ -92,3 +92,9 @@ function refresh(){
     myDeleteFunction(table);
     calculateMaxComments(oldComments);
 }
+
+async function deleteComments() {
+    const deleteFetch = await fetch('/data');
+    const deleteReponse = await response.text();
+  	document.getElementById("test").innerText = "This Works";
+}

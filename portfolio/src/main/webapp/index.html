@@ -34,7 +34,7 @@
             <p> In high school, I competed and placed in several programming and business competitions organized by DECA, FBLA, and Skills USA. </p>
         </div>
         
-        <label for="numOfComments">Number of Comments</label>
+        <label for="numOfComments">Number of Comments:</label>
 	    <select id="numOfComments" onchange="refresh()">
             <option value="all"selected>All</option>
             <option value="5">5</option>
@@ -43,11 +43,15 @@
 
         <div id="add-comment">
             <form action="/data" method="POST" id="comment-form">
-            <h4>Comments</h4>
+            <label>Enter Comment Below</label>
             <textarea name="new-comment" rows="4" cols="50" id="comment-box"></textarea>
             <button type="submit" id="submit">Submit</button>
             </form>
         </div>
+
+       	<form action="/delete-data" method="POST">
+    	    <button type="submit" onclick="deleteComments()" id="deleteButton">Delete Comments</button>
+	    </form>
 
         <div id="comment-section">
             <table id="comment-table">

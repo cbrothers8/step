@@ -96,5 +96,52 @@ function refresh(){
 async function deleteComments() {
     const deleteFetch = await fetch('/data');
     const deleteReponse = await response.text();
-  	document.getElementById("test").innerText = "This Works";
+}
+
+function createMap() {
+    // The location of The Arch
+  	var arch = {lat: 38.624691, lng: -90.184776};
+    //The location of the Zoo
+	var zoo = {lat: 38.638901, lng: -90.284599};
+ 
+    var map = new google.maps.Map(document.getElementById('map'), {zoom: 10, center: arch});
+
+	// The marker, positioned at The Arch
+  	var archMarker = new google.maps.Marker({position: arch, map: map});
+    // The marker, positioned at The Arch
+  	var zooMarker = new google.maps.Marker({position: zoo, map: map});
+
+    archMarker.addListener('click', function() {
+          map.setZoom(17);
+          map.setCenter(archMarker.getPosition());
+          archInfoWindow.open(map, archMarker);
+    }); 
+
+    zooMarker.addListener('click', function() {
+          map.setZoom(15);
+          map.setCenter(zooMarker.getPosition());
+          zooInfoWindow.open(map, zooMarker);
+        });
+}
+
+var archInfo = "<h1>The Gateway Arch</h1><br>" +
+                "The Gateway Arch is a 630-foot monument in St. Louis, Missouri, United States. Clad in stainless steel and built in the form of a weighted catenary arch, " +
+ 	            "it is the world's tallest arch, the tallest man-made monument in the Western Hemisphere, and Missouri's tallest accessible building.";
+
+var archInfoWindow = new google.maps.InfoWindow({
+    content: archInfo
+});
+
+var zooInfo = "<h1>Saint Louis Zoo</h1><br>" +
+	          "Home to over 13,000* animals representing 555* species, the Saint Louis Zoo is recognized worldwide for its innovative approaches to animal care and management, " +
+	          "wildlife conservation, research and education. One of the few free zoos in the nation, the Saint Louis Zoo attracts approximately 3 million visitors annually " +
+              "and is the most-visited attraction in the region.";
+
+var zooInfoWindow = new google.maps.InfoWindow({
+    content: zooInfo
+});
+
+function loadContent() {
+    createMap();
+    loadComments();
 }

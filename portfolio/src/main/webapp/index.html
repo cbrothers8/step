@@ -6,6 +6,7 @@
     <title>Ciara's Portfolio</title>
     <link rel="stylesheet" href="style.css">
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBaNl5Z5oW2nJG6EGc_SV1o_j17AWX6lx8&callback=createMap" async defer></script>
+    <script src="https://www.gstatic.com/charts/loader.js"></script>
     <script src="script.js"></script>
   </head>
   <body onload="loadContent()">
@@ -62,6 +63,19 @@
         </div>
 
         <div id="map"></div>
+
+        <div id="chart-container"></div>
+        <form action="/color-data" method="POST">
+      	    <select name="color" class="vote">
+        	    <option value="Red">Red</option>
+        	    <option value="Orange">Orange</option>
+        	    <option value="Yellow">Yellow</option>
+        	    <option value="Green">Green</option>
+        	    <option value="Blue">Blue</option>
+        	    <option value="Violet">Violet</option>
+      	    </select>
+      	    <button class="vote">Vote</button>
+    	</form>
         
         <footer>
             <p id="test"></p>

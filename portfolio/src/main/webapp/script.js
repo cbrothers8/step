@@ -44,6 +44,11 @@ async function loadComments() {
   calculateMaxComments(oldComments);
 }
 
+//remove this
+function loadMaptest() {
+    window.location.replace("maptest.html");
+}
+
 function calculateMaxComments(oldComments) {
     var selected = document.getElementById("numOfComments").value;
 	if (selected == 5) {
@@ -104,7 +109,7 @@ function createMap() {
     //The location of the Zoo
 	var zoo = {lat: 38.638901, lng: -90.284599};
  
-    var map = new google.maps.Map(document.getElementById('map'), {zoom: 10, center: arch});
+    var map = new google.maps.Map(document.getElementById('no'), {zoom: 10, center: arch});
 
 	// The marker, positioned at The Arch
   	var archMarker = new google.maps.Marker({position: arch, map: map});
@@ -142,7 +147,7 @@ var zooInfoWindow = new google.maps.InfoWindow({
 });
 
 function loadContent() {
-    createMap();
+    testMap();
     loadComments();
 }
 

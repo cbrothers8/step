@@ -44,6 +44,11 @@ async function loadComments() {
   calculateMaxComments(oldComments);
 }
 
+//remove this
+function loadMaptest() {
+    window.location.replace("maptest.html");
+}
+
 function calculateMaxComments(oldComments) {
     var selected = document.getElementById("numOfComments").value;
 	if (selected == 5) {
@@ -104,7 +109,7 @@ function createMap() {
     //The location of the Zoo
 	var zoo = {lat: 38.638901, lng: -90.284599};
  
-    var map = new google.maps.Map(document.getElementById('map'), {zoom: 10, center: arch});
+    var map = new google.maps.Map(document.getElementById('no'), {zoom: 10, center: arch});
 
 	// The marker, positioned at The Arch
   	var archMarker = new google.maps.Marker({position: arch, map: map});
@@ -142,6 +147,36 @@ var zooInfoWindow = new google.maps.InfoWindow({
 });
 
 function loadContent() {
-    createMap();
+    testMap();
     loadComments();
+}
+
+google.charts.load('current', {'packages':['corechart']});
+google.charts.setOnLoadCallback(drawChart);
+
+/** Creates a chart and adds it to the page. */
+function drawChart() {
+  fetch('/color-data').then(response => response.json())
+  .then((colorVotes) => {
+    const data = new google.visualization.DataTable();
+    data.addColumn('string', 'Color');
+    data.addColumn('number', 'Votes');
+    Object.keys(colorVotes).forEach((color) => {
+      data.addRow([color, colorVotes[color]]);
+    });
+        data.addRows([
+            ['White', 10],
+          	['Pink', 5],
+          	['Black', 15]
+        ]);
+
+    const options = {
+      'title': 'Favorite Colors',
+      'width':600,
+      'height':500
+    };
+
+  const chart = new google.visualization.PieChart(document.getElementById('chart-container'));
+  chart.draw(data, options);
+  });
 }
